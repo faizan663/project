@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets\Bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/collection.css">
+</head>
+<body>
+    <div class="collection-head text-center">
+        Our Collection
+    </div>
+    <div class="collection-btn">
+        <button type="button" class="btn" data-category="all">All</button>
+        <button type="button" class="btn" data-category="summer">Summer</button>
+        <button type="button" class="btn" data-category="winter">Winter</button>
+        <button type="button" class="btn" data-category="wedding">Wedding</button>
+        <button type="button" class="btn" data-category="casual">Casual</button>
+    </div>
+
+    <!-- collection cards start -->
+    <div class="collection-all-cards">
+        <div class="collection-cards" data-category="summer">
+            <div class="collection-image">
+                <img src="assets\images\stylist image\96820-abc_1__1.webp" alt="Summer Collection Item">
+                <div class="cards-text">
+                    <p>Summer Collection Item</p>
+                    <span>PKR 2,999</span>
+                    <div class="card-btn">
+                        <button>More Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collection-cards" data-category="winter">
+            <div class="collection-image">
+                <img src="assets\images\stylist image\384917-abc_1_.webp" alt="Winter Collection Item">
+                <div class="cards-text">
+                    <p>Winter Collection Item</p>
+                    <span>PKR 3,999</span>
+                    <div class="card-btn">
+                        <button>More Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collection-cards" data-category="winter summer">
+            <div class="collection-image">
+                <img src="assets\images\stylist image\tribal_ikat_unstitched_fabric_cotton_-fawn_2_.webp" alt="Multi-Season Collection Item">
+                <div class="cards-text">
+                    <p>Multi-Season Jacket</p>
+                    <span>PKR 5,999</span>
+                    <div class="card-btn">
+                        <button>More Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collection-cards" data-category="wedding">
+            <div class="collection-image">
+                <img src="assets\images\stylist image\black_text_crew_neck_sweater_swt-ffscn22-269_4_.webp" alt="Wedding Collection Item">
+                <div class="cards-text">
+                    <p>Wedding Collection Item</p>
+                    <span>PKR 6,999</span>
+                    <div class="card-btn">
+                        <button>More Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collection-cards" data-category="casual">
+            <div class="collection-image">
+                <img src="assets\images\stylist image\tribal_ikat_unstitched_fabric_cotton_-fawn_2_.webp" alt="Casual Collection Item">
+                <div class="cards-text">
+                    <p>Casual Collection Item</p>
+                    <span>PKR 1,999</span>
+                    <div class="card-btn">
+                        <button>More Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.collection-btn .btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                const cards = document.querySelectorAll('.collection-cards');
+
+                cards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-category').split(' ');
+                    if (category === 'all' || cardCategories.includes(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script src="assets\Bootstrap\js\bootstrap.min.js"></script>
+</body>
+</html>

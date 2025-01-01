@@ -1,0 +1,109 @@
+/* Collection Head Styles */
+.collection-head {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Collection Button Styles */
+.collection-btn {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.collection-btn button {
+    border: 2px solid #333;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.collection-btn button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Collection Card Grid */
+.collection-all-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Collection Card Styles */
+.collection-cards {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.collection-cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.collection-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #ddd;
+}
+
+.cards-text {
+    padding: 15px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.cards-text p {
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.cards-text span {
+    display: block;
+    font-weight: normal;
+    color: #e74c3c;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.card-btn button {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-btn button:hover {
+    background-color: #fff;
+    color: #333;
+}
